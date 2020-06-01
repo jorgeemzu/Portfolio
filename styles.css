@@ -1,0 +1,300 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+:root{
+    --green: #1BBC9B;
+    --black: #333333;
+}
+
+body{
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 16px;
+}
+
+p{
+    color: var(--black);
+}
+
+.container{
+    width: 85%;
+    margin: 0 auto;
+}
+
+img{
+    max-width: 100%;
+}
+
+.top_menu{
+    background-color: var(--green);
+    padding: 2em 0;
+}
+
+.contact_top{
+    text-align: center;
+}
+
+.contact_top > .contact_top-item{
+    margin-bottom: .5em;
+}
+
+.contact_top-item > i{
+    color: white;
+    margin-right: .3em;
+}
+
+.contact_top-item > a{
+    color: white;
+    text-decoration: none;
+}
+
+.social__menu > ul{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 0;
+    margin-top: 2em;
+}
+
+.social__menu--item{
+    color: white;
+    font-size: 1.3rem;
+    
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__bar{
+    padding: 2em 0;
+}
+
+.logo{
+    width: 30%;
+}
+
+.menu--container{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    top: 266px;
+    width: 100vw;
+    height: 0;
+    background-color: var(--green);
+    overflow: hidden;
+    transition: .5s ease;
+
+}
+
+.nav__menu{
+    position: absolute;
+    /* visibility: hidden; */
+    list-style: none;
+    top: 0;
+    left: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.nav__menu li{
+    width: 100vw;
+    display: inline-block;
+    border-bottom: solid 1px white;
+    padding: 1em;
+}
+
+.nav__item{
+    color: white;
+    text-decoration: none;
+    font-size: 1.3rem;
+    
+    margin-bottom: 1em;
+    /* width: 100%;
+    display: inline-block; */
+}
+
+.checkbox{
+    position: absolute;
+    visibility: hidden;
+}
+
+.hamburger_menu{
+    position: relative;
+    transition: .5s ease-out;
+}
+
+.hamburger_menu > div{
+    width: 30px;
+    height: 3px;
+    background-color: var(--green);
+    transition: .5s ease;
+}
+
+.hamburger_menu > div::after,
+.hamburger_menu > div::before{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background-color: var(--green);
+    transition: .5s ease;
+}
+
+.hamburger_menu > div::after{
+    top: 10px;
+}
+
+.hamburger_menu > div::before{
+    top: -10px;
+}
+
+.checkbox:checked ~ .menu--container{
+        height: 63vh;
+}
+
+.checkbox:checked ~ .hamburger_menu > div{
+    transform: rotate(135deg);
+}
+
+.checkbox:checked ~ .hamburger_menu > div::after,
+.checkbox:checked ~ .hamburger_menu > div::before{
+    top: 0;
+    transform: rotate(90deg);
+}
+
+.hero{
+    
+    background-image: url('images/1633.jpg');
+    
+    background-size: cover;
+    background-repeat: repeat;
+    
+}
+
+.hero > div{
+    background-color: rgba(0, 0, 0, .3);
+    padding: 3em 0;
+}
+
+.hero h1{
+    font-family: 'Bebas Neue', cursive;
+    text-shadow: 1px 1px 5px var(--black);
+    color: white;
+}
+
+.hero p{
+    color: white;
+    text-shadow: 1px 1px 5px var(--black);
+   
+    
+}
+
+.hero_text a{
+    text-align: center;
+}
+
+.btn__green{
+    text-align: center;
+}
+
+.btn__green a{
+    padding: 1em;
+    background-color: var(--green);
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    margin-top: 1em;
+    display: inline-block;
+}
+.services__container{
+    padding: 2.5em 0;
+    text-align: center;
+}
+
+.ourServices{
+    margin-bottom: 3em;
+}
+
+.ourServices h2{
+    margin-bottom: 1em;
+}
+
+.icon_container{
+    border: solid 2px var(--green);
+    display: inline-block;
+    transform: rotate(45deg);
+    margin-bottom: 1.6em;
+    width: 70px;
+    height: 70px;
+    
+}
+
+.icon_container i{
+    transform: rotate(-45deg);
+    color: var(--green);
+    padding: 1em;
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.service__item{
+    margin-bottom: 4em;
+}
+
+.service__item h2{
+    width: 70%;
+    margin: 0 auto 1em auto;
+    
+}
+
+.service__item p{
+    margin-bottom: 1em;
+}
+
+.btn_service{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn_service a, .btn_service i {
+    color: var(--green);
+    text-decoration: none;
+    
+}
+
+.btn_service a{
+    margin-right: .5em;
+}
+
+.btn_service i{
+    font-size: .7rem;
+}
+
+.somos_container{
+    background-image: url('images/536.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+.somos_container h2{
+    color: white;
+    margin-bottom: 1em;
+    text-shadow: 1px 1px 5px var(--black);
+}
+
+
+
+
+
