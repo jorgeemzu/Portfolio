@@ -28,7 +28,7 @@ img{
 
 .top_menu{
     background-color: var(--green);
-    padding: 2em 0;
+    padding: .8em 0;
 }
 
 .contact_top{
@@ -79,6 +79,13 @@ img{
     width: 30%;
 }
 
+.checkbox{
+    position: absolute;
+    visibility: hidden;
+}
+/*
+
+
 .menu--container{
     position: absolute;
     display: flex;
@@ -96,7 +103,7 @@ img{
 
 .nav__menu{
     position: absolute;
-    /* visibility: hidden; */
+     visibility: hidden; 
     list-style: none;
     top: 0;
     left: 0;
@@ -117,14 +124,11 @@ img{
     font-size: 1.3rem;
     
     margin-bottom: 1em;
-    /* width: 100%;
-    display: inline-block; */
+     width: 100%;
+    display: inline-block; 
 }
 
-.checkbox{
-    position: absolute;
-    visibility: hidden;
-}
+
 
 .hamburger_menu{
     position: relative;
@@ -169,7 +173,7 @@ img{
     top: 0;
     transform: rotate(90deg);
 }
-
+*/
 .hero{
     
     background-image: url('images/1633.jpg');
@@ -184,6 +188,8 @@ img{
     padding: 3em 0;
 }
 
+
+
 .hero h1{
     font-family: 'Bebas Neue', cursive;
     text-shadow: 1px 1px 5px var(--black);
@@ -195,6 +201,10 @@ img{
     text-shadow: 1px 1px 5px var(--black);
    
     
+}
+
+.hero_text{
+    text-align: center;
 }
 
 .hero_text a{
@@ -296,5 +306,182 @@ img{
 
 
 
+/* Mobile Version */
+
+@media  (max-width: 800px){
+
+    
+
+.menu--container{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    top: 266px;
+    width: 100vw;
+    height: 0;
+    background-color: var(--green);
+    overflow: hidden;
+    transition: .5s ease;
+
+}
+
+.nav__menu{
+    position: absolute;
+     /* visibility: hidden;  */
+    list-style: none;
+    top: 0;
+    left: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.nav__menu li{
+    width: 100vw;
+    display: inline-block;
+    border-bottom: solid 1px white;
+    padding: 1em;
+}
+
+.nav__item{
+    color: white;
+    text-decoration: none;
+    font-size: 1.3rem;
+    
+    margin-bottom: 1em;
+     width: 100%;
+    display: inline-block; 
+}
+
+.checkbox{
+    position: absolute;
+    visibility: hidden;
+}
+
+.hamburger_menu{
+    position: relative;
+    transition: .5s ease-out;
+}
+
+.hamburger_menu > div{
+    width: 30px;
+    height: 3px;
+    background-color: var(--green);
+    transition: .5s ease;
+}
+
+.hamburger_menu > div::after,
+.hamburger_menu > div::before{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background-color: var(--green);
+    transition: .5s ease;
+}
+
+.hamburger_menu > div::after{
+    top: 10px;
+}
+
+.hamburger_menu > div::before{
+    top: -10px;
+}
+
+.checkbox:checked ~ .menu--container{
+        height: 63vh;
+}
+
+.checkbox:checked ~ .hamburger_menu > div{
+    transform: rotate(135deg);
+}
+
+.checkbox:checked ~ .hamburger_menu > div::after,
+.checkbox:checked ~ .hamburger_menu > div::before{
+    top: 0;
+    transform: rotate(90deg);
+}
 
 
+}
+
+
+@media (min-width: 800px){
+
+    .social__menu{
+        width: 20%;
+    }
+
+
+    .logo{
+        width: 10%;
+    }
+
+    .nav__menu--container{
+        width: 40%;
+    }
+
+    .social__menu > ul{
+        justify-content: space-between;
+        margin: 0;
+    }
+
+    .nav__menu{
+        padding: 0;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .nav__menu li > a{
+        color: var(--green);
+        text-decoration: none;
+    }
+
+    .hero, .hero > div{
+        height: 80vh;
+        
+    }
+
+    .hero_text > h1,
+    .somos_text > h2{
+        font-size: 4rem;
+        margin: 0;
+    }
+
+    .hero_text p,
+    .somos_text > p{
+        font-size: 2rem;
+        margin-bottom: 1em;
+    }
+
+    .ourServices{
+       margin-bottom: 2em;
+    }
+
+    .ourServices h2{
+        font-size: 4rem;
+        border-bottom: solid 2px var(--green);
+        display: inline-block;
+        padding: .7em;
+        margin: 3em 0 1em 0;
+    }
+
+    .ourServices > p{
+        font-size: 1.5rem;
+        margin-bottom: 6rem;
+    }
+
+
+    .services{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 5em;
+    }
+
+   
+    
+
+}
